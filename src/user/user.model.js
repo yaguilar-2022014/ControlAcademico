@@ -15,13 +15,13 @@ const userSchema = mongoose.Schema({
     },
     password:{
         type: String,
-        minLength: [6, 'Password must be 6 characters'],
+        minLength: [5, 'Password must be 5 characters'],
         required: true
     },
     role: {
         type: String,
         uppercase: true,
-        enum: ['STUDENT', 'TEACHER'],
+        enum: ['STUDENT', 'TEACHER', 'USER'],
         required: true
     }
 })
