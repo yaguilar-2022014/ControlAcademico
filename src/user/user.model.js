@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose, { Schema } from "mongoose"
 
 const userSchema = mongoose.Schema({
     name: {
@@ -17,6 +17,10 @@ const userSchema = mongoose.Schema({
         type: String,
         minLength: [5, 'Password must be 5 characters'],
         required: true
+    },
+    courses:{
+        type: Array,
+        ref: 'course',
     },
     role: {
         type: String,
